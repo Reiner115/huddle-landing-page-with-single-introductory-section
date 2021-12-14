@@ -1,0 +1,207 @@
+*{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+    color: white;
+}
+
+$main-color:hsl(257, 40%, 49%);
+$second-color: hsl(300, 69%, 71%);
+
+body{
+    background-color: $main-color;
+    background-image: url("images/bg-mobile.svg") ;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+
+
+
+.header{
+    margin-top: 60px;
+    margin-left: 40px;
+    .img{
+        width: 125px;
+        height: 25px;
+    }
+}
+main{
+    .hero{
+        margin-top: 70px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+        .hero-img{
+            width: 300px;
+        }
+
+        .wrapper{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            gap: 30px;
+
+            h1{
+                font-family: 'Poppins', sans-serif;
+                font-weight: 700;
+                font-size: 1.4rem;
+                max-width: 260px;
+                
+            }
+            p{
+                font-family: 'Open Sans', sans-serif;
+                //font-weight: 400;  
+                font-size: 1rem;
+                font-weight: 300; 
+                max-width: 300px;
+            }
+        }
+        
+    }
+}
+
+.button{
+    width: 200px;
+    height: 40px;
+    background-color: white;
+    border-radius: 30px;
+    color: $main-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 2px 2px 2px rgba(0,0,0,.2);
+    cursor: pointer;
+    transition: 200ms ease-in-out;
+}
+.button:hover{
+    background-color: $second-color;
+    color:white;
+    transform: translateY(-10px);
+}
+
+footer{
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 40px;
+    .icons{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 16px;
+    
+        .icon-wrapper{
+            width: 28px;
+            height: 28px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            border: 1px solid white;
+            cursor: pointer;
+            transition: 200ms ease-in-out;
+            
+        } 
+        .icon{
+            color:inherit;
+        }
+        .icon-wrapper:hover{
+            transform: translateY(-10px);
+            border-color: $second-color;   
+            color:$second-color;     
+        }  
+        
+    }
+    
+}
+
+
+@media screen and ( min-width:992px) {
+    
+    body{
+        background-image: url("images/bg-desktop.svg");
+        background-size: cover;
+    }
+    .wrapper{
+        margin-left: 80px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin-top: 70px;
+    }
+    .header{
+        margin: 0px;
+        .img{
+            width: 200px;
+            height: 50px;
+        }
+    }
+    main{
+        justify-content: flex-start;
+        align-items: flex-start;
+        .hero{
+            flex-direction: row;
+            gap: 40px;
+            
+
+            .hero-img{
+                width: 500px;
+                max-width: 500px;
+                max-height: 300px;
+            }
+            text-align: left;
+            .wrapper{
+                align-items: flex-start;
+                text-align: left;
+                margin: auto;
+                margin-top: 50px;
+                h1{
+                    max-width: 500px;
+                    font-family: 'Poppins', sans-serif;
+                    font-weight: 700;
+                    font-size: 2rem;                                        
+                }
+                p{
+                    max-width: 400px;
+                    font-family: 'Open Sans', sans-serif;
+                    //font-weight: 400;  
+                    font-size: 1rem;
+                    font-weight: 300; 
+                    
+                }
+            }
+        }
+    }
+    footer{
+        justify-content: flex-end;
+        align-items: flex-end;
+        margin-right: 80px;
+    }
+}
+
+@media screen  and (min-width:1200px) {
+    main{
+        .hero{
+            
+            .hero-img{
+                width: 700px;
+                max-width: 700px;
+                max-height: 500px;
+            }
+            .wrapper{
+                
+                h1{
+                    font-size: 2.3rem;
+                }
+            }
+        }
+    }
+}
